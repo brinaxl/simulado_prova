@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Redes e Segurança, vamos arrasar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="start-screen">
+            <div class="header">
+                <h1>Redes e Segurança</h1>
+                <p>Vai com tudo divas!</p>
+            </div>
+            <button class="btn btn-primary" id="start-btn">Iniciar Quiz</button>
+        </div>
+
+        <div class="quiz-screen hidden">
+            <div class="header">
+                <h1>Redes e Segurança</h1>
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="time">30</span> segundos
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text" id="question"></div>
+                <div class="options-grid" id="options"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-secondary" id="skip-btn">
+                    <i class="fas fa-forward"></i> Pular
+                </button>
+                <button class="btn btn-primary" id="next-btn" disabled>
+                    Próxima <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="results-screen hidden">
+            <h2>Resultado Final</h2>
+            <div class="score-board">
+                <p>Pontuação: <span id="final-score">0</span>/<span id="total-questions">0</span></p>
+                <p>Acertos: <span id="correct-answers">0</span></p>
+                <p>Erros: <span id="wrong-answers">0</span></p>
+            </div>
+            <button class="btn btn-primary" id="restart-btn">
+                <i class="fas fa-redo"></i> Reiniciar
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
