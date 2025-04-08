@@ -1,23 +1,102 @@
 const questions = [
-    // Virtualização
+
     {
-        question: "Qual é o principal benefício da virtualização de servidores?",
+        question: "O que é um Sistema de Informação?",
         options: [
-            "Redução de custos com hardware",
-            "Aumento do consumo energético",
-            "Dependência de fornecedor único",
-            "Complexidade de gerenciamento"
+          "Um programa de edição de imagens",
+          "Um conjunto de dados desconectados",
+          "Um sistema que coleta, processa, armazena e distribui informações",
+          "Um tipo de hardware de rede"
+        ],
+        answer: 2,
+        timer: 20
+    },
+    {
+        question: "Qual estrutura de sistema operacional usa um núcleo mínimo?",
+        options: [
+          "Monolítica",
+          "Máquina Virtual",
+          "Microkernel",
+          "Batch"
+        ],
+        answer: 2,
+        timer: 20
+    },
+    {
+        question: "O que é um processo no sistema operacional?",
+        options: [
+          "Um aplicativo não iniciado",
+          "A execução de um programa",
+          "Um espaço vazio na memória",
+          "Um arquivo do kernel"
+        ],
+        answer: 1,
+        timer: 20
+    },
+    {
+        question: "Qual tipo de SO permite execução simultânea de programas?",
+        options: [
+          "Monoprogramado",
+          "Multitarefa",
+          "Batch",
+          "Interativo"
+        ],
+        answer: 1,
+        timer: 20
+    },
+    {
+        question:"Qual principal befício de usar Docker?",
+        options: [
+            "Aumentar o consumo de memória do sistema",
+            "Executar múltiplas versões de um app em máquinas diferentes",
+            "Empacotar aplicações com todas as suas dependências",
+            "Substituir completamente o sistema operacional"
+        ],
+        answer: 2,
+        timer: 20
+    },
+    
+    // Pergunta 15
+    {
+        pergunta: "O que é um container no Docker?",
+        options: [
+            "Um tipo de máquina virtual pesada",
+            "Um ambiente leve e isolado para executar aplicações",
+            "Um programa usado para programar servidores",
+            "Uma ferramenta para atualizar o sistema operacional"
+        ],
+        answer: 1,
+        timer: 20
+    },
+    
+    // Pergunta 16
+    {
+        question: "Qual comando do Docker é usado para baixar uma imagem do repositório?",
+        options: [
+            "docker pull",
+            "docker start",
+            "docker push",
+            "docker save"
+        ],
+        answer: 0,
+        timer: 20
+    },
+    {
+        question: "ENIAC - foi o primeiro computador eletrônico, utilizava válvulas eletronicos.",
+        options: [
+            "Verdadeiro",
+            "Falso"
         ],
         answer: 0,
         timer: 25
     },
     {
-        question: "Um hypervisor Tipo 2 é caracterizado por:",
+        question: "Qual era a principal função dos papéis perfurados no contexto de sistemas",
         options: [
-            "Executar diretamente no hardware",
-            "Rodar sobre um sistema operacional host",
-            "Não permitir múltiplas VMs",
-            "Ser usado apenas em mainframes"
+            "Armazenar grandes volumes de dados em formato digital",
+            "Processar informações em tempo real em sistemas interativos",
+            "Servir como meio de entrada e saída para computadores, codificando dados,",
+            "Controlar o fluxo de energia elétrica no sistema de computação"
         ],
         answer: 1,
         timer: 20
@@ -189,6 +268,224 @@ const questions = [
         ],
         answer: 0,
         timer: 20
+    }, 
+    {
+        question: "Qual é a função principal de um Sistema de Informação em uma organizaç?",
+        options: [
+            "Criar redes sociais para os funcionários ",
+            "Automatizar tarefas sem necessidade de análise",
+            "Coletar, processar, armazenar e distribuir informações",
+            "Apenas armazenar arquivos digitais"
+        ],
+        answer: 0,
+        timer: 20
+    },
+    {
+        question: "A diferença entre virtualização completa e paravirtualização é:",
+        options: [
+            "Acesso direto ao hardware",
+            "Uso de drivers especiais",
+            "Compatibilidade com SOs",
+            "Isolamento de rede"
+        ],
+        answer: 1,
+        timer: 25
+    },
+    {
+        question: "O que é multitarefa em um sistema operacional??",
+        options: [
+            "Realizar tarefas de forma lentad",
+            "Realizar uma única tarefa de cada vez",
+            "Não realizar tarefas",
+            "Realizar várias tarefas simultaneamente "
+        ],
+        answer: 1,
+        timer: 15
+    },
+    {
+        question: "O que é um Dockerfile?",
+        options: [
+            "Arquivo de configuração do Docker",
+            "Script para criar imagens Docker",
+            "Registro de containers em execução",
+            "Interface gráfica do Docker"
+        ],
+        answer: 1,
+        timer: 20
+    },
+    {
+        question: "Qual é a principal função de um sistema operacional?",
+        options: [
+            "Gerenciar hardware e software",
+            "Criar aplicativos",
+            "Proteger dados pessoais",
+            "Conectar à internet"
+        ],
+        answer: 0,
+        timer: 15
+    },
+    {
+        question: "O procesaado é respponsavel por fazer o processamento dos dados",
+        options: [
+            "Verdadeiro",
+            "Falso"
+        ],
+        answer: 0,
+        timer: 20
+    },
+    {
+       question: " Todos os sistemas operacionais são iguais e oferecem as mesmas funções",
+        options: [
+            "Verdadeiro",
+            "Falso"
+        ],
+        answer: 1,
+        timer: 20 
+    },
+    {
+        question: "Quais sãp os estados de um processo em um sistema operacional?",
+        options: [
+            "Ativo. inativo, suspenso, finalizado",
+            "CRIADO, EXECUTANDO, ESPERA, TERMINADO",
+            "PRONTO, EXECUTANDO, BLOQUEADOO",
+            "INCIAL, PRONTO, SUSPENSO, TERMINO(VOLUNTARIO)"
+        ],
+        answer: 2,
+        timer: 20
+    },
+    {
+        question: "O Kernel é um sistema operacional completo que fornece todos os serviços necessários",
+        options: [
+            "Verdadeiro",
+            "Falso"
+        ],
+        answer: 1,
+        timer: 20
+    },
+    {
+        question: "Qual é a principal função do Kernel em um sistema operacional?",
+        options: [
+            "Armazenar arquivos de usuário",
+            "Personalizar a aparência da interface gráfica:",
+            "Executar apenas aplicativos de terceiros",
+            "Gerenciar hardware e software, fazendo a comunicação entre eles"
+        ],
+        answer: 3,
+        timer: 20
+    },
+    {
+        question: "Qual das funções abaixo é uma função básica de um sistema operacional?",
+        options: [
+            "Conectar computador à internet",
+            "Criar aplicativos para o usuário",
+            "Controlar os dispositivos de hardware do computador",
+            "Armazenar dados na nuvem"
+        ],
+        answer: 2,
+        timer: 20
+    },
+    {
+        question: "O que é um escalanador de processos em um sistema operacional?",
+        options: [
+            "É um processo que é sempre executado em segundo plano.",
+            "É uma ferramenta que permite ao usuário revisar todos os processos em execução",
+            "É um recurso que permite ao usuário interromper e reiniciar processos.s",
+            "É uma parte do S.O que decide qual processo deve ser executado a seguir."
+        ],
+        answer: 3,
+        timer: 20
+    },
+    {
+        question: "Uma máquina multinível é vista como tendo vários níveis, cada um capaz de executar um conjunto de instruções específicas.",
+        options: [
+            "Verdadeiro",
+            "Falso"
+        ],
+        answer: 0,
+        timer: 20
+    },
+    {
+        question: "Qual dessas opções não é uma funcao de um sistema operacional?",
+        options: [
+            "Gerenciar memória",
+            "Compilar códigos de programação",
+            "Controlar dispositivos de entrada e saída",
+            "Administrar processos"
+        ],
+        answer: 1,
+        timer:40
+    },
+    {
+        question: "Quais são um os estadoos de um processol?",
+        options: [
+            "Executando, Pronto e Usando a CPU",
+            "Novo, Terminando e Usando a CPU",
+            "Executando, Bloqueado e Prontoo",
+            "N.D.A (Nenhuma das Alternativas)"
+        ],
+        answer: 2,
+        timer: 35
+    }, 
+    {
+        question: "Trap é o mecanismo que ocorre quando uma chamadaa de sistema é acionada por um programa em execução.",
+        options: [
+            "Verdadeiro",
+            "Falso"
+        ],
+        answer: 0,
+        timer: 20
+    },
+    {
+        question: "Qual desses dipositivos é utilizado para entrada e saída de dados em um computador?",
+        options: [
+            "Teclado",
+            "Monitor",
+            "Impressora",
+            "Caixa de som"
+        ],
+        answer: 0,
+        timer: 15
+    },
+    {
+        question: "Threads são linhas de execuçao de um processo.",
+        options: [
+            "Verdadeiro",
+            "Falso"
+        ],
+        answer: 0,  
+        timer: 20
+    },
+    {
+        question: 'Inrterrupção - eveento inesperado vindo dentro de um processador',
+        options: [
+            "Verdadeiro",
+            "Falso"
+        ],
+        answer: 0,
+        timer: 20
+    },
+    {
+        question: "Qual principal vantagem do uso de threads em um programa",
+        options: [
+            "Melhorar o desempenho em tarefas de entrada e saída (I/O)",
+            "Amentar a complexidade do código-fonte ",
+            "Facilitar a criação de gráficos e interfaces de usuário",
+            "Permitir que um programa execute múltiplas tarefas simultaneamente"
+        ],
+        answer: 3,
+        timer: 20
+    },
+    {
+        question: "Que tipo de operações a ULA é capaz de realizar?",
+        options:[
+            "Armazenamento de dados permanentes",
+            "Controle de dispositivos externos ",
+            "Operações lógicas e aritméticas",
+            "Gerenciamento de memória"
+
+        ],
+        answer: 2,
+        timer: 20
     }
 ];
 
@@ -197,7 +494,8 @@ let currentQuestion = 0;
 let score = 0;
 let timeLeft;
 let timerId;
-const quizDuration = 300;
+const quizDuration = 1000;
+let history = []; // Array para armazenar o histórico
 
 const elements = {
     startScreen: document.querySelector('.start-screen'),
@@ -211,7 +509,8 @@ const elements = {
     finalScore: document.getElementById('final-score'),
     totalQuestions: document.getElementById('total-questions'),
     correctAnswers: document.getElementById('correct-answers'),
-    wrongAnswers: document.getElementById('wrong-answers')
+    wrongAnswers: document.getElementById('wrong-answers'),
+    history: document.getElementById('history')
 };
 
 function startQuiz() {
@@ -225,37 +524,59 @@ function loadQuestion() {
     const q = questions[currentQuestion];
     elements.question.textContent = q.question;
     elements.options.innerHTML = q.options.map((option, index) => `
-        <button class="option-btn" onclick="selectAnswer(${index})">
+        <button class="option-btn" data-index="${index}">
             ${String.fromCharCode(65 + index)}. ${option}
         </button>
     `).join('');
 
-    elements.progress.style.width = `${(currentQuestion / questions.length) * 100}%`;
+    // Adiciona event listeners aos botões de opção
+    document.querySelectorAll('.option-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const selectedIndex = parseInt(e.target.getAttribute('data-index'));
+            selectAnswer(selectedIndex);
+        });
+    });
+
+    // Atualiza a barra de progresso
+    elements.progress.style.width = `${Math.round((currentQuestion / questions.length) * 100)}%`;
     timeLeft = q.timer;
     updateTimerDisplay();
 }
 
 function selectAnswer(selectedIndex) {
-    const options = document.querySelectorAll('.option-btn');
     const correctIndex = questions[currentQuestion].answer;
+    const isCorrect = selectedIndex === correctIndex;
 
-    options.forEach((btn, index) => {
-        btn.disabled = true;
-        if(index === correctIndex) {
-            btn.classList.add('correct');
-        } else if(index === selectedIndex) {
-            btn.classList.add('incorrect');
-        }
+    // Adiciona ao histórico
+    history.push({
+        question: questions[currentQuestion].question,
+        userAnswer: questions[currentQuestion].options[selectedIndex],
+        correctAnswer: questions[currentQuestion].options[correctIndex],
+        isCorrect: isCorrect
     });
 
-    if(selectedIndex === correctIndex) score++;
+    // Destaca a resposta correta e a selecionada (se errada)
+    document.querySelector(`.option-btn[data-index="${correctIndex}"]`).classList.add('correct');
+    if (selectedIndex !== -1 && selectedIndex !== correctIndex) {
+        document.querySelector(`.option-btn[data-index="${selectedIndex}"]`).classList.add('incorrect');
+    }
+
+    // Desabilita os botões após a seleção
+    document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
+
+    // Atualiza a pontuação
+    if (selectedIndex === correctIndex) score++;
+
+    // Habilita o botão "Próxima"
     elements.nextBtn.disabled = false;
+
+    // Para o timer
     clearInterval(timerId);
 }
 
 function nextQuestion() {
     currentQuestion++;
-    if(currentQuestion < questions.length) {
+    if (currentQuestion < questions.length) {
         resetQuestionState();
         loadQuestion();
         startTimer();
@@ -270,10 +591,10 @@ function startTimer() {
     timerId = setInterval(() => {
         timeLeft--;
         updateTimerDisplay();
-        
-        if(timeLeft <= 0) {
+
+        if (timeLeft <= 0) {
             clearInterval(timerId);
-            selectAnswer(-1);
+            selectAnswer(-1); // Seleciona automaticamente uma resposta incorreta
         }
     }, 1000);
 }
@@ -298,25 +619,25 @@ function showResults() {
     elements.totalQuestions.textContent = questions.length;
     elements.correctAnswers.textContent = score;
     elements.wrongAnswers.textContent = questions.length - score;
+
+    // Exibe o histórico
+    const historyHTML = history.map((item, index) => `
+        <div class="history-item ${item.isCorrect ? 'correct' : 'incorrect'}">
+            <p><strong>Pergunta ${index + 1}:</strong> ${item.question}</p>
+            <p>Sua resposta: ${item.userAnswer}</p>
+            <p>Resposta correta: ${item.correctAnswer}</p>
+        </div>
+    `).join('');
+    elements.history.innerHTML = historyHTML;
 }
 
+// Event Listeners
 document.getElementById('start-btn').addEventListener('click', startQuiz);
 document.getElementById('next-btn').addEventListener('click', nextQuestion);
 document.getElementById('restart-btn').addEventListener('click', () => {
     currentQuestion = 0;
     score = 0;
+    history = [];
     elements.resultsScreen.classList.add('hidden');
     elements.startScreen.classList.remove('hidden');
-});
-
-document.querySelectorAll('.option-btn').forEach(btn => {
-    btn.addEventListener('mouseover', () => {
-        if(!btn.disabled) {
-            btn.style.transform = 'translateY(-2px)';
-        }
-    });
-    
-    btn.addEventListener('mouseout', () => {
-        btn.style.transform = 'translateY(0)';
-    });
 });

@@ -171,3 +171,92 @@ body {
 .hidden {
   display: none;
 }
+.history {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.history-item {
+  background: white;
+  border: 2px solid var(--primary);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.history-item.correct {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+.history-item.incorrect {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+.history-item p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: var(--primary);
+}
+
+.history-item strong {
+  color: var(--secondary);
+  font-weight: 600;
+}
+/* Estilos para a Tela Inicial */
+.start-screen .header {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.start-screen .header h1 {
+  color: var(--primary);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.start-screen .header p {
+  color: var(--primary);
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.start-screen .header p strong {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.start-screen .header p:last-child {
+  margin-bottom: 0;
+}
+
+.start-screen .btn-primary {
+  background: var(--primary);
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 40px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.start-screen .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background: var(--secondary);
+}

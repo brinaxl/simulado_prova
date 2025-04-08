@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz de Redes e Segurança, vamos arrasar</title>
+    <title>Quiz de Redes e Segurança</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="quiz-container">
+        <!-- Tela Inicial -->
         <div class="start-screen">
             <div class="header">
                 <h1>Redes e Segurança</h1>
-                <p>Vai com tudo divas!</p>
+                <p>Testando nossos conhecimentos sobre sistemas operacionais, Docker e virtualização!</p>
+                <p>Instruções: Responda as perguntas antes que o tempo acabe girlss. <strong>Arrasa, divas!</strong> 💪✨</p>
             </div>
             <button class="btn btn-primary" id="start-btn">Iniciar Quiz</button>
         </div>
 
+        <!-- Tela do Quiz -->
         <div class="quiz-screen hidden">
             <div class="header">
                 <h1>Redes e Segurança</h1>
@@ -45,6 +48,7 @@
             </div>
         </div>
 
+        <!-- Tela de Resultados -->
         <div class="results-screen hidden">
             <h2>Resultado Final</h2>
             <div class="score-board">
@@ -52,6 +56,7 @@
                 <p>Acertos: <span id="correct-answers">0</span></p>
                 <p>Erros: <span id="wrong-answers">0</span></p>
             </div>
+            <div class="history" id="history"></div> <!-- Seção de Histórico -->
             <button class="btn btn-primary" id="restart-btn">
                 <i class="fas fa-redo"></i> Reiniciar
             </button>
