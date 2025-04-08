@@ -630,6 +630,21 @@ function showResults() {
     `).join('');
     elements.history.innerHTML = historyHTML;
 }
+function skipQuestion() {
+    // Adiciona ao histórico como "Pulada"
+    history.push({
+        question: questions[currentQuestion].question,
+        userAnswer: "Pulada",
+        correctAnswer: questions[currentQuestion].options[questions[currentQuestion].answer],
+        isCorrect: false
+    });
+
+    // Avança para a próxima pergunta
+    nextQuestion();
+}
+
+// Adiciona o event listener ao botão "Pular"
+document.getElementById('skip-btn').addEventListener('click', skipQuestion);
 
 // Event Listeners
 document.getElementById('start-btn').addEventListener('click', startQuiz);
