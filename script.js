@@ -150,7 +150,7 @@ const questions = [
         timer: 20
     },
 
-    // Arquitetura de Computadores
+    
     {
         question: "Na arquitetura de von Neumann, a unidade de controle é parte:",
         options: [
@@ -174,7 +174,6 @@ const questions = [
         timer: 15
     },
 
-    // Gerenciamento de Memória
     {
         question: "Fragmentação externa ocorre quando:",
         options: [
@@ -495,7 +494,7 @@ let score = 0;
 let timeLeft;
 let timerId;
 const quizDuration = 1000;
-let history = []; // Array para armazenar o histórico
+let history = []; 
 
 const elements = {
     startScreen: document.querySelector('.start-screen'),
@@ -518,13 +517,12 @@ let userProfile = {
     icon: ""
 };
 
-// Ícones disponíveis (você pode adicionar mais)
-// No arquivo script.js
+
 console.log("Ícone selecionado:", userProfile.icon);
 console.log("Nome do usuário:", userProfile.name);
 
 
-// Carrega os ícones na tela de perfil
+
 const icons = ["😊", "😎", "👩‍💻", "👑", "🚀"];
 
 function loadIcons() {
@@ -533,16 +531,14 @@ function loadIcons() {
         <div class="icon-option" data-index="${index}">${icon}</div>
     `).join('');
 
-    // Adiciona os event listeners
+  
     document.querySelectorAll('.icon-option').forEach(iconDiv => {
         iconDiv.addEventListener('click', () => {
-            // Remove seleção anterior
+            
             document.querySelectorAll('.icon-option').forEach(i => i.classList.remove('selected'));
 
-            // Adiciona seleção
             iconDiv.classList.add('selected');
 
-            // Salva o emoji REAL selecionado
             const selectedIndex = iconDiv.getAttribute('data-index');
             userProfile.icon = icons[selectedIndex];
 
@@ -551,7 +547,7 @@ function loadIcons() {
     });
 }
 
-// Salva o perfil e inicia o quiz
+
 document.getElementById('save-profile').addEventListener('click', () => {
     const username = document.getElementById('username').value;
     if (!username || !userProfile.icon) {
@@ -561,15 +557,15 @@ document.getElementById('save-profile').addEventListener('click', () => {
 
     userProfile.name = username;
 
-    // Salva o perfil no localStorage
+    
     localStorage.setItem('userProfile', JSON.stringify(userProfile));
 
-    // Oculta a tela de perfil e mostra a tela inicial do quiz
+    
     document.querySelector('.profile-screen').classList.add('hidden');
     document.querySelector('.start-screen').classList.remove('hidden');
 });
 
-// Carrega o perfil salvo (se existir)
+
 function loadProfile() {
     const savedProfile = localStorage.getItem('userProfile');
     if (savedProfile) {
@@ -582,7 +578,7 @@ function loadProfile() {
     }
 }
 
-// Exibe o perfil no quiz
+
 function displayProfile() {
     const userProfileDisplay = document.querySelector('.user-profile-display');
     if (userProfileDisplay) {
@@ -592,11 +588,11 @@ function displayProfile() {
 }
 
 
-// Chame essa função ao iniciar o quiz
+
 function startQuiz() {
     elements.startScreen.classList.add('hidden');
     elements.quizScreen.classList.remove('hidden');
-    displayProfile(); // Exibe o perfil
+    displayProfile(); 
     loadQuestion();
     startTimer();
 }
@@ -610,7 +606,7 @@ function loadQuestion() {
         </button>
     `).join('');
 
-    // Adiciona event listeners aos botões de opção
+    
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const selectedIndex = parseInt(e.target.getAttribute('data-index'));
@@ -618,7 +614,7 @@ function loadQuestion() {
         });
     });
 
-    // Atualiza a barra de progresso
+    
     elements.progress.style.width = `${Math.round((currentQuestion / questions.length) * 100)}%`;
     timeLeft = q.timer;
     updateTimerDisplay();
@@ -628,7 +624,7 @@ function selectAnswer(selectedIndex) {
     const correctIndex = questions[currentQuestion].answer;
     const isCorrect = selectedIndex === correctIndex;
 
-    // Adiciona ao histórico
+    
     history.push({
         question: questions[currentQuestion].question,
         userAnswer: questions[currentQuestion].options[selectedIndex],
@@ -636,22 +632,19 @@ function selectAnswer(selectedIndex) {
         isCorrect: isCorrect
     });
 
-    // Destaca a resposta correta e a selecionada (se errada)
+
     document.querySelector(`.option-btn[data-index="${correctIndex}"]`).classList.add('correct');
     if (selectedIndex !== -1 && selectedIndex !== correctIndex) {
         document.querySelector(`.option-btn[data-index="${selectedIndex}"]`).classList.add('incorrect');
     }
 
-    // Desabilita os botões após a seleção
+    
     document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
 
-    // Atualiza a pontuação
+    
     if (selectedIndex === correctIndex) score++;
 
-    // Habilita o botão "Próxima"
     elements.nextBtn.disabled = false;
-
-    // Para o timer
     clearInterval(timerId);
 }
 
@@ -675,7 +668,7 @@ function startTimer() {
 
         if (timeLeft <= 0) {
             clearInterval(timerId);
-            selectAnswer(-1); // Seleciona automaticamente uma resposta incorreta
+            selectAnswer(-1); 
         }
     }, 1000);
 }
@@ -701,7 +694,7 @@ function showResults() {
     elements.correctAnswers.textContent = score;
     elements.wrongAnswers.textContent = questions.length - score;
 
-    // Exibe o histórico
+    
     const historyHTML = history.map((item, index) => `
         <div class="history-item ${item.isCorrect ? 'correct' : 'incorrect'}">
             <p><strong>Pergunta ${index + 1}:</strong> ${item.question}</p>
@@ -713,7 +706,7 @@ function showResults() {
     elements.history.innerHTML = historyHTML;
 }
 function skipQuestion() {
-    // Adiciona ao histórico como "Pulada"
+    
     history.push({
         question: questions[currentQuestion].question,
         userAnswer: "Pulada",
@@ -721,21 +714,15 @@ function skipQuestion() {
         isCorrect: false
     });
 
-    // Avança para a próxima pergunta
+    
     nextQuestion();
 }
 
-// Adiciona o event listener ao botão "Pular"
+
 document.getElementById('skip-btn').addEventListener('click', skipQuestion);
 
-// Event Listeners
-// ... (código anterior)
-
-// Inicializa o quiz
-loadProfile(); // <----- Adicione esta linha
-loadIcons();   // <----- Adicione esta linha
-
-// Event Listeners
+loadProfile(); 
+loadIcons();   
 document.getElementById('start-btn').addEventListener('click', startQuiz);
 document.getElementById('next-btn').addEventListener('click', nextQuestion);
 document.getElementById('restart-btn').addEventListener('click', () => {
