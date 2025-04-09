@@ -294,12 +294,12 @@ const questions = [
     {
         question: "O que é multitarefa em um sistema operacional??",
         options: [
-            "Realizar tarefas de forma lentad",
+            "Realizar tarefas de forma lenta",
             "Realizar uma única tarefa de cada vez",
             "Não realizar tarefas",
             "Realizar várias tarefas simultaneamente "
         ],
-        answer: 1,
+        answer: 3,
         timer: 15
     },
     {
