@@ -58,7 +58,7 @@ const questions = [
     
     // Pergunta 15
     {
-        pergunta: "O que é um container no Docker?",
+        question: "O que é um container no Docker?",
         options: [
             "Um tipo de máquina virtual pesada",
             "Um ambiente leve e isolado para executar aplicações",
@@ -270,7 +270,7 @@ const questions = [
         timer: 20
     }, 
     {
-        question: "Qual é a função principal de um Sistema de Informação em uma organizaç?",
+        question: "Qual é a função principal de um Sistema de Informação em uma organização?",
         options: [
             "Criar redes sociais para os funcionários ",
             "Automatizar tarefas sem necessidade de análise",
@@ -281,7 +281,7 @@ const questions = [
         timer: 20
     },
     {
-        question: "A diferença entre virtualização completa e paravirtualização é:",
+        question: "A diferença entre Virtualização completa e ParavVirtualização é:",
         options: [
             "Acesso direto ao hardware",
             "Uso de drivers especiais",
@@ -325,7 +325,7 @@ const questions = [
         timer: 15
     },
     {
-        question: "O procesaado é respponsavel por fazer o processamento dos dados",
+        question: "O processador é responsavel por fazer o processamento dos dados",
         options: [
             "Verdadeiro",
             "Falso"
@@ -334,7 +334,7 @@ const questions = [
         timer: 20
     },
     {
-       question: " Todos os sistemas operacionais são iguais e oferecem as mesmas funções",
+       question: "Todos os sistemas operacionais são iguais e oferecem as mesmas funções",
         options: [
             "Verdadeiro",
             "Falso"
@@ -343,7 +343,7 @@ const questions = [
         timer: 20 
     },
     {
-        question: "Quais sãp os estados de um processo em um sistema operacional?",
+        question: "Quais são os estados de um processo em um sistema operacional?",
         options: [
             "Ativo. inativo, suspenso, finalizado",
             "CRIADO, EXECUTANDO, ESPERA, TERMINADO",
@@ -405,7 +405,7 @@ const questions = [
         timer: 20
     },
     {
-        question: "Qual dessas opções não é uma funcao de um sistema operacional?",
+        question: "Qual dessas opções não é uma função de um sistema operacional?",
         options: [
             "Gerenciar memória",
             "Compilar códigos de programação",
@@ -420,7 +420,7 @@ const questions = [
         options: [
             "Executando, Pronto e Usando a CPU",
             "Novo, Terminando e Usando a CPU",
-            "Executando, Bloqueado e Prontoo",
+            "Executando, Bloqueado e Pronto",
             "N.D.A (Nenhuma das Alternativas)"
         ],
         answer: 2,
@@ -447,7 +447,7 @@ const questions = [
         timer: 15
     },
     {
-        question: "Threads são linhas de execuçao de um processo.",
+        question: "Threads são linhas de execução de um processo.",
         options: [
             "Verdadeiro",
             "Falso"
@@ -456,7 +456,7 @@ const questions = [
         timer: 20
     },
     {
-        question: 'Inrterrupção - eveento inesperado vindo dentro de um processador',
+        question: 'Interrupção - evento inesperado vindo dentro de um processador',
         options: [
             "Verdadeiro",
             "Falso"
@@ -503,9 +503,9 @@ const elements = {
     resultsScreen: document.querySelector('.results-screen'),
     question: document.getElementById('question'),
     options: document.getElementById('options'),
+    nextBtn: document.getElementById('next-btn'),
     time: document.getElementById('time'),
     progress: document.getElementById('progress'),
-    nextBtn: document.getElementById('next-btn'),
     finalScore: document.getElementById('final-score'),
     totalQuestions: document.getElementById('total-questions'),
     correctAnswers: document.getElementById('correct-answers'),
@@ -513,9 +513,90 @@ const elements = {
     history: document.getElementById('history')
 };
 
+let userProfile = {
+    name: "",
+    icon: ""
+};
+
+// Ícones disponíveis (você pode adicionar mais)
+// No arquivo script.js
+console.log("Ícone selecionado:", userProfile.icon);
+console.log("Nome do usuário:", userProfile.name);
+
+
+// Carrega os ícones na tela de perfil
+const icons = ["😊", "😎", "👩‍💻", "👑", "🚀"];
+
+function loadIcons() {
+    const iconGrid = document.getElementById('icon-grid');
+    iconGrid.innerHTML = icons.map((icon, index) => `
+        <div class="icon-option" data-index="${index}">${icon}</div>
+    `).join('');
+
+    // Adiciona os event listeners
+    document.querySelectorAll('.icon-option').forEach(iconDiv => {
+        iconDiv.addEventListener('click', () => {
+            // Remove seleção anterior
+            document.querySelectorAll('.icon-option').forEach(i => i.classList.remove('selected'));
+
+            // Adiciona seleção
+            iconDiv.classList.add('selected');
+
+            // Salva o emoji REAL selecionado
+            const selectedIndex = iconDiv.getAttribute('data-index');
+            userProfile.icon = icons[selectedIndex];
+
+            console.log("Emoji selecionado:", userProfile.icon);
+        });
+    });
+}
+
+// Salva o perfil e inicia o quiz
+document.getElementById('save-profile').addEventListener('click', () => {
+    const username = document.getElementById('username').value;
+    if (!username || !userProfile.icon) {
+        alert("Por favor, insira seu nome e escolha um ícone!");
+        return;
+    }
+
+    userProfile.name = username;
+
+    // Salva o perfil no localStorage
+    localStorage.setItem('userProfile', JSON.stringify(userProfile));
+
+    // Oculta a tela de perfil e mostra a tela inicial do quiz
+    document.querySelector('.profile-screen').classList.add('hidden');
+    document.querySelector('.start-screen').classList.remove('hidden');
+});
+
+// Carrega o perfil salvo (se existir)
+function loadProfile() {
+    const savedProfile = localStorage.getItem('userProfile');
+    if (savedProfile) {
+        userProfile = JSON.parse(savedProfile);
+        document.querySelector('.profile-screen').classList.add('hidden');
+        document.querySelector('.start-screen').classList.remove('hidden');
+    } else {
+        document.querySelector('.profile-screen').classList.remove('hidden');
+        document.querySelector('.start-screen').classList.add('hidden');
+    }
+}
+
+// Exibe o perfil no quiz
+function displayProfile() {
+    const userProfileDisplay = document.querySelector('.user-profile-display');
+    if (userProfileDisplay) {
+        userProfileDisplay.querySelector('.user-icon').textContent = userProfile.icon;
+        userProfileDisplay.querySelector('.username').textContent = userProfile.name;
+    }
+}
+
+
+// Chame essa função ao iniciar o quiz
 function startQuiz() {
     elements.startScreen.classList.add('hidden');
     elements.quizScreen.classList.remove('hidden');
+    displayProfile(); // Exibe o perfil
     loadQuestion();
     startTimer();
 }
@@ -624,8 +705,9 @@ function showResults() {
     const historyHTML = history.map((item, index) => `
         <div class="history-item ${item.isCorrect ? 'correct' : 'incorrect'}">
             <p><strong>Pergunta ${index + 1}:</strong> ${item.question}</p>
-            <p>Sua resposta: ${item.userAnswer}</p>
-            <p>Resposta correta: ${item.correctAnswer}</p>
+            <p><strong>Sua resposta:</strong> <span class="user-answer">${item.userAnswer}</span></p>
+            <p><strong>Resposta correta:</strong> <span class="correct-answer">${item.correctAnswer}</span></p>
+            <p><strong>Usuário:</strong> ${userProfile.name}</p>
         </div>
     `).join('');
     elements.history.innerHTML = historyHTML;
@@ -645,6 +727,13 @@ function skipQuestion() {
 
 // Adiciona o event listener ao botão "Pular"
 document.getElementById('skip-btn').addEventListener('click', skipQuestion);
+
+// Event Listeners
+// ... (código anterior)
+
+// Inicializa o quiz
+loadProfile(); // <----- Adicione esta linha
+loadIcons();   // <----- Adicione esta linha
 
 // Event Listeners
 document.getElementById('start-btn').addEventListener('click', startQuiz);
