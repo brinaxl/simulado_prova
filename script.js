@@ -246,7 +246,7 @@ const questions = [
         timer: 10
     },
 
-    // Conceitos Avançados
+    // Conceitos avançados
     {
         question: "O que é Namespace no contexto de containers?",
         options: [
@@ -277,11 +277,11 @@ const questions = [
             "Coletar, processar, armazenar e distribuir informações",
             "Apenas armazenar arquivos digitais"
         ],
-        answer: 0,
+        answer: 2,
         timer: 20
     },
     {
-        question: "A diferença entre Virtualização completa e ParavVirtualização é:",
+        question: "A diferença entre Virtualização completa e ParaVirtualização é:",
         options: [
             "Acesso direto ao hardware",
             "Uso de drivers especiais",
@@ -346,9 +346,9 @@ const questions = [
         question: "Quais são os estados de um processo em um sistema operacional?",
         options: [
             "Ativo. inativo, suspenso, finalizado",
-            "CRIADO, EXECUTANDO, ESPERA, TERMINADO",
-            "PRONTO, EXECUTANDO, BLOQUEADOO",
-            "INCIAL, PRONTO, SUSPENSO, TERMINO(VOLUNTARIO)"
+            "criado, executando, espera, terminado",
+            "pronto, executando, bloqueado",
+            "inicial, pronto, suspenso, termino(voluntario)"
         ],
         answer: 2,
         timer: 20
