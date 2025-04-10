@@ -1,4 +1,4 @@
-const questions = [
+const questionsKahoot = [
 
     {
         question: "O que é um Sistema de Informação?",
@@ -485,17 +485,304 @@ const questions = [
         ],
         answer: 2,
         timer: 20
-    }
-];
+        }
+]
+const questionsTeoricas = [ /* Cole aqui suas perguntas teóricas */ 
+    
+        // Seção 1: Sistemas de Informação
+        {
+            question: "O que são sistemas?",
+            options: [
+                "Conjunto de elementos interdependentes integrados por fluxo de informações, matéria e energia.",
+                "Programas de computador interligados.",
+                "Dispositivos de hardware conectados em rede.",
+                "Processos de reengenharia organizacional."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        {
+            question: "Qual a diferença entre Dados e Informação?",
+            options: [
+                "Dados são fatos brutos; Informação são dados processados e organizados.",
+                "Dados são sempre numéricos; Informação é textual.",
+                "Informação é armazenada em bancos de dados; Dados são temporários.",
+                "Não há diferença, são sinônimos."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Seção 2: Sistemas Operacionais
+        {
+            question: "Qual estrutura de SO usa um núcleo mínimo?",
+            options: [
+                "Monolítica",
+                "Microkernel",
+                "Máquina Virtual",
+                "Batch"
+            ],
+            answer: 1,
+            timer: 20
+        },
+        {
+            question: "O que caracteriza um SO Multitarefa em Batch?",
+            options: [
+                "Processa tarefas em sequência sem intervenção do usuário.",
+                "Permite interação em tempo real com o usuário.",
+                "Executa apenas um programa por vez.",
+                "Usa exclusivamente memória virtual."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Seção 3: Chamadas de Sistema e Interrupções
+        {
+            question: "O que são Interrupções de Software (Traps)?",
+            options: [
+                "Solicitações de serviços do kernel por aplicações.",
+                "Falhas físicas no hardware.",
+                "Erros de programação em aplicativos.",
+                "Sinais elétricos externos."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Seção 4: Processos
+        {
+            question: "Qual estado de processo indica 'aguardando um evento externo'?",
+            options: [
+                "Executando",
+                "Bloqueado",
+                "Pronto",
+                "Finalizado"
+            ],
+            answer: 1,
+            timer: 20
+        },
+        {
+            question: "O que faz um Escalonador Preemptivo?",
+            options: [
+                "Permite que processos percam a CPU forçosamente.",
+                "Executa processos apenas em sequência.",
+                "Não permite interrupções.",
+                "Gerencia apenas memória virtual."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Seção 5: Threads
+        {
+            question: "O que threads compartilham em um processo?",
+            options: [
+                "Espaço de endereço e recursos do processo.",
+                "Registradores da CPU individualmente.",
+                "Código de execução independente.",
+                "Nenhum recurso é compartilhado."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Seção 6: Gerenciamento de Memória
+        {
+            question: "Qual a função da MMU?",
+            options: [
+                "Converter endereços virtuais em físicos.",
+                "Gerenciar processos em execução.",
+                "Criar partições fixas na memória.",
+                "Controlar dispositivos de E/S."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        {
+            question: "O que é Swapping?",
+            options: [
+                "Troca de processos entre memória RAM e disco.",
+                "Técnica de paginação de memória virtual.",
+                "Alocação estática de partições.",
+                "Comunicação entre threads."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Seção 7: Memória Virtual
+        {
+            question: "O que é um Page Fault?",
+            options: [
+                "Erro crítico no sistema operacional.",
+                "Referência a uma página não carregada na RAM.",
+                "Falha na conexão de rede.",
+                "Interrupção de hardware."
+            ],
+            answer: 1,
+            timer: 20
+        },
+        // Seção 8: E/S
+        {
+            question: "Qual vantagem da conexão serial?",
+            options: [
+                "Maior velocidade que a paralela.",
+                "Custo reduzido e simplicidade.",
+                "Uso exclusivo em dispositivos modernos.",
+                "Não requer controle de fluxo."
+            ],
+            answer: 1,
+            timer: 20
+        },
+        // Conceitos Avançados
+        {
+            question: "O que é Reengenharia de Processos?",
+            options: [
+                "Revisão radical de processos para melhorar resultados.",
+                "Atualização de hardware em sistemas legados.",
+                "Troca de sistemas operacionais.",
+                "Backup automático de dados."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        {
+            question: "Qual estrutura de SO usa 'máquinas virtuais independentes'?",
+            options: [
+                "Monolítica",
+                "Microkernel",
+                "Camadas",
+                "Máquina Virtual"
+            ],
+            answer: 3,
+            timer: 20
+        },
+        {
+            question: "O que define uma Estrutura Organizacional?",
+            options: [
+                "Subunidades organizacionais e suas relações com a empresa como um todo.",
+                "Um tipo de sistema operacional.",
+                "Um modelo de gerenciamento de memória.",
+                "Um protocolo de rede."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Sistemas Operacionais
+        {
+            question: "Por que uma máquina multinível é usada?",
+            options: [
+                "Para aumentar a velocidade do processador.",
+                "Para reduzir a complexidade do sistema computacional.",
+                "Para substituir a memória RAM.",
+                "Para evitar o uso de chamadas de sistema."
+            ],
+            answer: 1,
+            timer: 20
+        },
+        // Processos
+        {
+            question: "Qual a diferença entre Programa e Processo?",
+            options: [
+                "Programa é um algoritmo codificado; Processo é a execução do programa com estado e dados.",
+                "Programa é uma instância de um processo.",
+                "Processo é um tipo de dado alfanumérico.",
+                "Não há diferença significativa."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Threads
+        {
+            question: "Qual a principal diferença entre Processos e Threads?",
+            options: [
+                "Threads compartilham recursos do processo; Processos são independentes.",
+                "Processos são mais leves que threads.",
+                "Threads não podem ser escalonados.",
+                "Processos não usam memória virtual."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Gerenciamento de Memória
+        {
+            question: "O que caracteriza partições FIXAS na memória?",
+            options: [
+                "Tamanho e número variáveis para otimização.",
+                "Tamanho e número pré-definidos, com desperdício de memória.",
+                "Uso exclusivo para sistemas monolíticos.",
+                "Alocação dinâmica de recursos."
+            ],
+            answer: 1,
+            timer: 20
+        },
+        // Memória Virtual
+        {
+            question: "Qual a diferença entre Paginação e Segmentação?",
+            options: [
+                "Paginação usa blocos variáveis; Segmentação usa blocos fixos.",
+                "Paginação usa blocos fixos; Segmentação usa blocos variáveis.",
+                "Ambas usam blocos fixos.",
+                "Segmentação não usa tabelas de mapeamento."
+            ],
+            answer: 1,
+            timer: 20
+        },
+        // E/S
+        {
+            question: "Qual característica define dispositivos HÍBRIDOS?",
+            options: [
+                "Funcionam apenas como entrada.",
+                "Funcionam como entrada e saída (ex: tela sensível ao toque).",
+                "São exclusivamente usados em redes.",
+                "Não requerem drivers."
+            ],
+            answer: 1,
+            timer: 20
+        },
+        // Escalonamento
+        {
+            question: "Qual a diferença entre Escalonador Preemptivo e Não Preemptivo?",
+            options: [
+                "Preemptivo permite interrupção forçada; Não Preemptivo não permite.",
+                "Não Preemptivo é mais comum em sistemas batch.",
+                "Preemptivo é usado apenas em sistemas monolíticos.",
+                "Não há diferença prática."
+            ],
+            answer: 0,
+            timer: 20
+        },
+        // Chamadas de Sistema
+        {
+            question: "Qual o propósito de uma Chamada de Sistema?",
+            options: [
+                "Aumentar a velocidade do processador.",
+                "Permitir que aplicações executem instruções privilegiadas via modo kernel.",
+                "Substituir interrupções de hardware.",
+                "Gerenciar threads."
+            ],
+            answer: 1,
+            timer: 20
+        },
+        // Reengenharia
+        {
+            question: "Qual o objetivo da Reengenharia de Processos?",
+            options: [
+                "Atualizar hardware obsoleto.",
+                "Revisar radicalmente processos para melhorar resultados organizacionais.",
+                "Substituir sistemas operacionais.",
+                "Otimizar conexões de rede."
+            ],
+            answer: 1,
+            timer: 20
+        }
+    
+    ];
 
-
+// Variáveis globais
+let selectedQuiz = [];
 let currentQuestion = 0;
 let score = 0;
 let timeLeft;
 let timerId;
-const quizDuration = 1000;
 let history = []; 
 
+// Elementos DOM
 const elements = {
     startScreen: document.querySelector('.start-screen'),
     quizScreen: document.querySelector('.quiz-screen'),
@@ -512,101 +799,85 @@ const elements = {
     history: document.getElementById('history')
 };
 
+// Dados do usuário
 let userProfile = {
     name: "",
     icon: ""
 };
 
-
-console.log("Ícone selecionado:", userProfile.icon);
-console.log("Nome do usuário:", userProfile.name);
+// Conjuntos de perguntas (exemplos)
 
 
 
-const icons = ["😊", "😎", "👩‍💻", "👑", "🚀"];
-
+// Função para carregar ícones na tela de perfil
 function loadIcons() {
     const iconGrid = document.getElementById('icon-grid');
-    iconGrid.innerHTML = icons.map((icon, index) => `
-        <div class="icon-option" data-index="${index}">${icon}</div>
-    `).join('');
-
-  
-    document.querySelectorAll('.icon-option').forEach(iconDiv => {
-        iconDiv.addEventListener('click', () => {
-            
+    const icons = ["😊", "😎", "👩💻", "👑", "🚀"];
+    iconGrid.innerHTML = '';
+    
+    icons.forEach(icon => {
+        const iconElement = document.createElement('div');
+        iconElement.className = 'icon-option';
+        iconElement.textContent = icon;
+        iconElement.setAttribute('data-icon', icon);
+        
+        iconElement.addEventListener('click', () => {
             document.querySelectorAll('.icon-option').forEach(i => i.classList.remove('selected'));
-
-            iconDiv.classList.add('selected');
-
-            const selectedIndex = iconDiv.getAttribute('data-index');
-            userProfile.icon = icons[selectedIndex];
-
-            console.log("Emoji selecionado:", userProfile.icon);
+            iconElement.classList.add('selected');
+            userProfile.icon = icon;
         });
+        
+        iconGrid.appendChild(iconElement);
     });
 }
 
-
+// Evento: Salvar perfil
 document.getElementById('save-profile').addEventListener('click', () => {
     const username = document.getElementById('username').value;
     if (!username || !userProfile.icon) {
         alert("Por favor, insira seu nome e escolha um ícone!");
         return;
     }
-
     userProfile.name = username;
-
-    
     localStorage.setItem('userProfile', JSON.stringify(userProfile));
-
-    
     document.querySelector('.profile-screen').classList.add('hidden');
-    document.querySelector('.start-screen').classList.remove('hidden');
+    document.querySelector('.quiz-select-screen').classList.remove('hidden');
 });
 
+// Eventos de seleção de simulado
+document.getElementById('kahoot-btn').addEventListener('click', () => {
+    selectedQuiz = questionsKahoot;
+    startQuiz();
+});
 
-function loadProfile() {
-    const savedProfile = localStorage.getItem('userProfile');
-    if (savedProfile) {
-        userProfile = JSON.parse(savedProfile);
-        document.querySelector('.profile-screen').classList.add('hidden');
-        document.querySelector('.start-screen').classList.remove('hidden');
-    } else {
-        document.querySelector('.profile-screen').classList.remove('hidden');
-        document.querySelector('.start-screen').classList.add('hidden');
-    }
-}
+document.getElementById('teoricas-btn').addEventListener('click', () => {
+    selectedQuiz = questionsTeoricas;
+    startQuiz();
+});
 
-
-function displayProfile() {
-    const userProfileDisplay = document.querySelector('.user-profile-display');
-    if (userProfileDisplay) {
-        userProfileDisplay.querySelector('.user-icon').textContent = userProfile.icon;
-        userProfileDisplay.querySelector('.username').textContent = userProfile.name;
-    }
-}
-
-
-
+// Função principal do quiz
 function startQuiz() {
-    elements.startScreen.classList.add('hidden');
+    currentQuestion = 0;
+    score = 0;
+    history = [];
+    document.querySelector('.quiz-select-screen').classList.add('hidden');
     elements.quizScreen.classList.remove('hidden');
-    displayProfile(); 
+    displayProfile();
     loadQuestion();
     startTimer();
 }
 
+// Carrega uma pergunta
 function loadQuestion() {
-    const q = questions[currentQuestion];
+    const q = selectedQuiz[currentQuestion];
     elements.question.textContent = q.question;
+    
     elements.options.innerHTML = q.options.map((option, index) => `
         <button class="option-btn" data-index="${index}">
             ${String.fromCharCode(65 + index)}. ${option}
         </button>
     `).join('');
 
-    
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const selectedIndex = parseInt(e.target.getAttribute('data-index'));
@@ -614,43 +885,39 @@ function loadQuestion() {
         });
     });
 
-    
-    elements.progress.style.width = `${Math.round((currentQuestion / questions.length) * 100)}%`;
+    elements.progress.style.width = `${(currentQuestion / selectedQuiz.length) * 100}%`;
     timeLeft = q.timer;
     updateTimerDisplay();
 }
 
+// Processa resposta selecionada
 function selectAnswer(selectedIndex) {
-    const correctIndex = questions[currentQuestion].answer;
+    const q = selectedQuiz[currentQuestion];
+    const correctIndex = q.answer;
     const isCorrect = selectedIndex === correctIndex;
 
-    
     history.push({
-        question: questions[currentQuestion].question,
-        userAnswer: questions[currentQuestion].options[selectedIndex],
-        correctAnswer: questions[currentQuestion].options[correctIndex],
+        question: q.question,
+        userAnswer: selectedIndex !== -1 ? q.options[selectedIndex] : "Tempo esgotado",
+        correctAnswer: q.options[correctIndex],
         isCorrect: isCorrect
     });
 
-
+    document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
     document.querySelector(`.option-btn[data-index="${correctIndex}"]`).classList.add('correct');
-    if (selectedIndex !== -1 && selectedIndex !== correctIndex) {
+    if (selectedIndex !== -1 && !isCorrect) {
         document.querySelector(`.option-btn[data-index="${selectedIndex}"]`).classList.add('incorrect');
     }
 
-    
-    document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
-
-    
-    if (selectedIndex === correctIndex) score++;
-
+    if (isCorrect) score++;
     elements.nextBtn.disabled = false;
     clearInterval(timerId);
 }
 
+// Avança para próxima pergunta
 function nextQuestion() {
     currentQuestion++;
-    if (currentQuestion < questions.length) {
+    if (currentQuestion < selectedQuiz.length) {
         resetQuestionState();
         loadQuestion();
         startTimer();
@@ -659,25 +926,46 @@ function nextQuestion() {
     }
 }
 
+// Controle do timer
 function startTimer() {
     clearInterval(timerId);
     elements.nextBtn.disabled = true;
     timerId = setInterval(() => {
         timeLeft--;
         updateTimerDisplay();
-
         if (timeLeft <= 0) {
             clearInterval(timerId);
-            selectAnswer(-1); 
+            selectAnswer(-1);
         }
     }, 1000);
 }
 
+// Atualiza display do timer
 function updateTimerDisplay() {
     elements.time.textContent = timeLeft;
     elements.time.style.color = timeLeft <= 5 ? 'red' : 'inherit';
 }
 
+// Mostra resultados finais
+function showResults() {
+    elements.quizScreen.classList.add('hidden');
+    elements.resultsScreen.classList.remove('hidden');
+    
+    elements.finalScore.textContent = score;
+    elements.totalQuestions.textContent = selectedQuiz.length;
+    elements.correctAnswers.textContent = score;
+    elements.wrongAnswers.textContent = selectedQuiz.length - score;
+
+    elements.history.innerHTML = history.map((item, index) => `
+        <div class="history-item ${item.isCorrect ? 'correct' : 'incorrect'}">
+            <p><strong>Pergunta ${index + 1}:</strong> ${item.question}</p>
+            <p><strong>Sua resposta:</strong> ${item.userAnswer}</p>
+            <p><strong>Resposta correta:</strong> ${item.correctAnswer}</p>
+        </div>
+    `).join('');
+}
+
+// Funções auxiliares
 function resetQuestionState() {
     elements.nextBtn.disabled = true;
     elements.options.querySelectorAll('.option-btn').forEach(btn => {
@@ -686,49 +974,56 @@ function resetQuestionState() {
     });
 }
 
-function showResults() {
-    elements.quizScreen.classList.add('hidden');
-    elements.resultsScreen.classList.remove('hidden');
-    elements.finalScore.textContent = score;
-    elements.totalQuestions.textContent = questions.length;
-    elements.correctAnswers.textContent = score;
-    elements.wrongAnswers.textContent = questions.length - score;
-
-    
-    const historyHTML = history.map((item, index) => `
-        <div class="history-item ${item.isCorrect ? 'correct' : 'incorrect'}">
-            <p><strong>Pergunta ${index + 1}:</strong> ${item.question}</p>
-            <p><strong>Sua resposta:</strong> <span class="user-answer">${item.userAnswer}</span></p>
-            <p><strong>Resposta correta:</strong> <span class="correct-answer">${item.correctAnswer}</span></p>
-            <p><strong>Usuário:</strong> ${userProfile.name}</p>
-        </div>
-    `).join('');
-    elements.history.innerHTML = historyHTML;
-}
-function skipQuestion() {
-    
-    history.push({
-        question: questions[currentQuestion].question,
-        userAnswer: "Pulada",
-        correctAnswer: questions[currentQuestion].options[questions[currentQuestion].answer],
-        isCorrect: false
-    });
-
-    
-    nextQuestion();
+function displayProfile() {
+    const profileDisplay = document.querySelector('.user-profile-display');
+    if (profileDisplay) {
+        profileDisplay.querySelector('.user-icon').textContent = userProfile.icon;
+        profileDisplay.querySelector('.username').textContent = userProfile.name;
+    }
 }
 
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+    loadIcons();
+    const savedProfile = localStorage.getItem('userProfile');
+    if (savedProfile) {
+        userProfile = JSON.parse(savedProfile);
+        document.querySelector('.profile-screen').classList.add('hidden');
+        document.querySelector('.quiz-select-screen').classList.remove('hidden');
+    }
+});
 
-document.getElementById('skip-btn').addEventListener('click', skipQuestion);
-
-loadProfile(); 
-loadIcons();   
-document.getElementById('start-btn').addEventListener('click', startQuiz);
-document.getElementById('next-btn').addEventListener('click', nextQuestion);
+// Evento de reiniciar
 document.getElementById('restart-btn').addEventListener('click', () => {
     currentQuestion = 0;
     score = 0;
     history = [];
     elements.resultsScreen.classList.add('hidden');
-    elements.startScreen.classList.remove('hidden');
+    document.querySelector('.quiz-select-screen').classList.remove('hidden');
 });
+
+// Evento de pular pergunta
+document.getElementById('skip-btn').addEventListener('click', () => {
+    history.push({
+        question: selectedQuiz[currentQuestion].question,
+        userAnswer: "Pulada",
+        correctAnswer: selectedQuiz[currentQuestion].options[selectedQuiz[currentQuestion].answer],
+        isCorrect: false
+    });
+    nextQuestion();
+});
+
+// Evento de sair do quiz
+document.getElementById('exit-btn').addEventListener('click', () => {
+    const confirmExit = confirm("Deseja realmente sair do simulado? Seu progresso será perdido.");
+    if (confirmExit) {
+        currentQuestion = 0;
+        score = 0;
+        history = [];
+        elements.quizScreen.classList.add('hidden');
+        document.querySelector('.quiz-select-screen').classList.remove('hidden');
+    }
+});
+
+// Evento de próxima pergunta
+document.getElementById('next-btn').addEventListener('click', nextQuestion);

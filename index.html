@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="quiz-container">
-        
+        <!-- Tela de Perfil -->
         <div class="profile-screen">
             <div class="header">
                 <h1>Crie seu Perfil</h1>
@@ -22,19 +22,24 @@
             </div>
         </div>
 
-        
-        <div class="start-screen hidden">
+        <!-- Tela de Seleção de Simulado -->
+        <div class="quiz-select-screen hidden">
             <div class="header">
-                <h1>Redes e Segurança</h1>
-                <p>Teste seus conhecimentos sobre sistemas operacionais, Docker e muito mais!</p>
-                <p>Instruções: Responda as perguntas antes que o tempo acabe. <strong>Arrasa, divas!</strong> 💪✨</p>
+                <h1>Escolha seu Simulado</h1>
+                <p>Selecione o tipo de questões que deseja responder</p>
             </div>
-            <button class="btn btn-primary" id="start-btn">Iniciar Quiz</button>
+            <div class="quiz-options">
+                <button class="btn btn-primary" id="kahoot-btn">
+                    <i class="fas fa-gamepad"></i> Modo Kahoot
+                </button>
+                <button class="btn btn-secondary" id="teoricas-btn">
+                    <i class="fas fa-graduation-cap"></i> Perguntas Teóricas
+                </button>
+            </div>
         </div>
 
-        
+        <!-- Tela do Quiz -->
         <div class="quiz-screen hidden">
-            
             <div class="user-profile-display">
                 <span class="user-icon"></span>
                 <span class="username"></span>
@@ -57,7 +62,11 @@
                 <div class="options-grid" id="options"></div>
             </div>
 
+            <!-- Botões de Controle -->
             <div class="controls">
+                <button class="btn btn-exit" id="exit-btn">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
                 <button class="btn btn-secondary" id="skip-btn">
                     <i class="fas fa-forward"></i> Pular
                 </button>
@@ -67,7 +76,7 @@
             </div>
         </div>
 
-        
+        <!-- Tela de Resultados -->
         <div class="results-screen hidden">
             <h2>Resultado Final</h2>
             <div class="score-board">
